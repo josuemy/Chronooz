@@ -1,0 +1,13 @@
+
+<h1 class="text-center"> Kinda Related Stories </h1>
+
+<% @result["response"]["docs"].each do |x| %>
+  <div class="container">
+    <%= link_to x["snippet"], x["web_url"]  %>
+    <div>
+      <%= x["pub_date"][0,10].split("-").reverse.join("-") %>
+    </div>
+  </div>
+
+  <br/>
+<% end %>
