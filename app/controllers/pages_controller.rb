@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  
   def show
     @paramList = params[:id].split(" ")
     uri = URI("https://api.nytimes.com/svc/search/v2/articlesearch.json")
@@ -6,7 +7,7 @@ class PagesController < ApplicationController
     http.use_ssl = true
     uri.query = URI.encode_www_form({
       "api-key" => "0dca823a2ab54213962f9fd1977c3ea5",
-      "q" => @paramList.first + " " + @paramList.last + " " + @paramList[@paramList.length/2-1] ,
+      "q" => @paramList.first + " " + @paramList.last + " " + @paramList[@paramList.length/2-1] + " " + @paramList[@paramList.length/2] ,
       "sort" => "newest"
     })
     request = Net::HTTP::Get.new(uri.request_uri)
