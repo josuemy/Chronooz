@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def show
-    @paramList = params[:id].split(" ")
+    @paramList = params[:id].split([\?\s\!\-])
     uri = URI("https://api.nytimes.com/svc/search/v2/articlesearch.json")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
