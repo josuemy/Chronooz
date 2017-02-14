@@ -8,7 +8,7 @@ class PagesController < ApplicationController
     uri.query = URI.encode_www_form({
       "api-key" => "0dca823a2ab54213962f9fd1977c3ea5",
       # "q" => @paramList.first + " " + @paramList.last + " " + @paramList[@paramList.length/2-1] + " " + @paramList[@paramList.length/2] ,
-      "q" => @result,
+      "q" => @keywords,
       "sort" => "newest"
     })
     request = Net::HTTP::Get.new(uri.request_uri)
@@ -16,13 +16,13 @@ class PagesController < ApplicationController
   end
 
   def get_upper
-    @result = ""
+    @keywords = ""
     @paramList.each do |param|
       if(param[0] == param[0].upcase)
-        @result += param
+        @keywords += param + " "
       end
     end
-    @result
+    @keywords.rstrip
   end
 
   def test
