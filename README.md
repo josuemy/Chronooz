@@ -5,12 +5,12 @@ about the context of trending news by displaying related events in chronological
 
 My friend Ricky and I worked on this Ruby on Rails project during one day of SBHacks 2017. 
 
-###Known Bugs & Issues
-The web-app displays trending news articles and their related events but
+##Known Bugs & Issues
+The web-app displays trending news articles and their related events but there are some bugs that need to be fixed. These bugs are:
 
-* Ringtone needs to be fully implemented
-* On the Card creation screens, when the user presses back, it takes the user to the Alarm list screen, instead of the Card list screen
-* On the main alarm list screen, the user cannot press the back button to exit the app and go to the phone's main screen. However, they can still use the home button to do this. 
+* If a news article ends in a period, or special character, the page crashes
+* Sometimes, the related events page shows unrelated events --> need to define better algorithm to find keywords
 
-
-##How to use the app
+##How to use Chroonoz
+1. Click on the trending news article image to read that news article
+2. Click on the news article header to see a list of chronological related events
