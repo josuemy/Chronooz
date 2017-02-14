@@ -13,6 +13,7 @@ class PagesController < ApplicationController
     })
     request = Net::HTTP::Get.new(uri.request_uri)
     @result = JSON.parse(http.request(request).body)
+    @ret = get_upper
   end
 
   def get_upper
