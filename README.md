@@ -20,6 +20,7 @@ The web-app displays trending news articles and their related events but there a
 * If a news article ends in a period, or special character, the page crashes
 * Sometimes, the related events page shows unrelated events --> need to define better algorithm to find keywords
 * The NYTimes API sometime fetches Q&A posts instead of articles
+* Better names for the views and routes need to be defined
 
 ##How to use Chroonoz
 1. Click on the a news article image to read that news article
