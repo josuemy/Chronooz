@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   def get_upper
     @keywords = ""
     @paramList.each do |param|
-      if((param[0] == param[0].upcase)&& !param.empty)
+      if((param[0] == param[0].upcase)&& (param.length != 0))
         @keywords += param + " "
       end
     end
