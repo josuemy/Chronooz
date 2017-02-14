@@ -5,7 +5,7 @@ about the context of trending news by displaying related events in chronological
 
 My friend Ricky and I worked on this Ruby on Rails project during one day of SBHacks 2017. 
 
-###Known Bugs & Issues
+##Known Bugs & Issues
 The web-app displays trending news articles and their related events but there are some bugs that need to be fixed. These bugs are:
 
 * If a news article ends in a period, or special character, the page crashes
