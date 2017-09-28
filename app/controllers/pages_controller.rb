@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     http.use_ssl = true
     uri.query = URI.encode_www_form({
       "api-key" => "0dca823a2ab54213962f9fd1977c3ea5",
-      # "q" => @paramList.first + " " + @paramList.last + " " + @paramList[@paramList.length/2-1] + " " + @paramList[@paramList.length/2] ,
+      # "q" => @paramList.first + " " + @paramList.last + " " + @paramList[@paramList.length/2-1] + " " + @paramList[@paramList.length/2]
       "q" => get_upper,
       "sort" => "newest"
     })
