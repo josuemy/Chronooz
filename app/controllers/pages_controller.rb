@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   def show
     @paramList = params[:id].split(/\W+/) #/[\s\?\s\!\s\-\s\,\s]/
     uri = URI("https://api.nytimes.com/svc/search/v2/articlesearch.json")
@@ -19,7 +18,7 @@ class PagesController < ApplicationController
   def get_upper
     @keywords = ""
     @paramList.each do |param|
-      if((param[0] == param[0].upcase))
+      if(letter?(param[0]) && (param[0] == param[0].upcase))
         @keywords += param + " "
       end
     end
@@ -32,5 +31,7 @@ class PagesController < ApplicationController
     @result = JSON.parse(response)
   end
 
-
+  def letter?(lookAhead)
+    lookAhead =~ /[[:alpha:]]/
+  end
 end
