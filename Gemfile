@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 #so that it works with heroku
 gem 'pg', '0.20'
+#puma server
+gem 'puma'
 
 
 # Use ActiveModel has_secure_password
