@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg', '0.20'
 #puma server
 gem 'puma'
+gem 'airbrake', '~> 7.0'
 
 
 # Use ActiveModel has_secure_password
